@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>On Data Architecture</title>
+    <link rel="stylesheet" href="/styling/shared.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Jacquard+24&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+    .click-zoom input[type=checkbox] { display: none; }
+    .click-zoom label { display: block; line-height: 0; }
+    .click-zoom label img {
+        transition: transform 0.25s ease;
+        cursor: zoom-in;
+    }
+
+    .click-zoom input[type=checkbox]:checked ~ img {
+        transform: scale(2.5);
+        cursor: zoom-out;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title">
+        <h1>On Data Architecture</h1>
+        <h3>by Nick Roelants</h3>
+        </div>
+    </header>
+    <main>
+
+        <div class="click-zoom">
+        <label>
+            <input type="checkbox">
+        <img src="/gallery/2025-2026/08/Nick_01.webp">
+        </label>
+        </div>
+        <div class="click-zoom">
+        <label>
+            <input type="checkbox">
+        <img src="/gallery/2025-2026/08/Nick_02.webp">
+        </label>
+        </div>
+        <div class="click-zoom">
+        <label>
+            <input type="checkbox">
+        <img src="/gallery/2025-2026/08/Nick_03.webp">
+        </label>
+        </div>
+        <div class="click-zoom">
+        <label>
+            <input type="checkbox">
+        <img src="/gallery/2025-2026/08/Nick_04.webp">
+        </label>
+        </div>
+        <div class="click-zoom">
+        <label>
+            <input type="checkbox">
+        <img src="/gallery/2025-2026/08/Nick_05.webp">
+        </label>
+        </div>
+        <div class="click-zoom">
+        <label>
+            <input type="checkbox">
+        <img src="/gallery/2025-2026/08/Nick_06.webp">
+        </label>
+        </div>
+        <div class="click-zoom">
+        <label>
+            <input type="checkbox">
+        <img src="/gallery/2025-2026/08/Nick_07.webp">
+        </label>
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('.click-zoom img').forEach(function (img) {
+        img.addEventListener('mousemove', function (e) {
+            var r = img.getBoundingClientRect();
+            img.style.transformOrigin =
+                ((e.clientX - r.left) / r.width * 100).toFixed(1) + '% ' +
+                ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%';
+        });
+        });
+    </script>
+</body>
