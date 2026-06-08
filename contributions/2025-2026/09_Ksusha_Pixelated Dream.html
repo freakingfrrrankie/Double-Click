@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pixelated Dream</title>
+    <link rel="stylesheet" href="/styling/shared.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Jacquard+24&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+    img { width: 33vw;}
+    .click-zoom input[type=checkbox] { display: none; }
+    .click-zoom label { display: block; line-height: 0; }
+    .click-zoom label img {
+        transition: transform 0.25s ease;
+        cursor: zoom-in;
+    }
+
+    .click-zoom input[type=checkbox]:checked ~ img {
+        transform: scale(5);
+        cursor: zoom-out;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title">
+        <h1>Pixelated Dream</h1>
+        <h3>by Ksusha Shostakovska</h3>
+        </div>
+    </header>
+
+    <main>
+        <p>
+            How childhood memories are shaped through shared experiences with technology. It focuses on the idea of the “family computer” as a collective space, where time, attention, and interaction were not individual, but shared.
+
+        <br><br>Using a combination of personal notes, scanned materials, and found images, the work reconstructs fragments of memory connected to early digital experiences-especially moments spent watching and learning from my brother. These memories are not stored as files or re-cordings, but as sensations, repetitions, and shared presence.
+
+        <br><br>The structure follows four parts: memory, watching, fragments, and reflection. Together, they move from raw notes and early impressions toward a more reflective understanding of how digital environments influence what and how we remember.
+
+        <br><br>Rather than presenting technology as a neutral tool, the project suggests that it actively shapes experience. The computer becomes both a physical object and a space of interaction-something that exists between people, not just in front of them.
+
+        <br><br>In this way, memory is not located inside the machine, but somewhere between human experience and technological systems.
+        <div class="spacing"></div>
+        <ul style="justify-self: right; padding-right: 0;">index
+        <li>memory</li>
+        <li>watching</li>
+        <li>fragments</li>
+
+        </ul>
+        </p>
+        <div class="spacing"></div>
+        <div class="click-zoom">
+        <label>
+            <input type="checkbox">
+        <img src="/gallery/2025-2026/09/Ksusha_1.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_2.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_3.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_4.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_5.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_6.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_7.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_8.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_9.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_10.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_11.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_12.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_13.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_14.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_15.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_16.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_17.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_18.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_19.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_20.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_21.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_22.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_23.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_24.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_25.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_26.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_27.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_28.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_29.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_30.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_31.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_33.webp">
+        <img src="/gallery/2025-2026/09/Ksusha_34.webp">
+        </label>
+        </div>
+    <div class="spacing"></div>
+    <div class="spacing"></div>
+    </main>
+    <script>
+        document.querySelectorAll('.click-zoom img').forEach(function (img) {
+        img.addEventListener('mousemove', function (e) {
+            var r = img.getBoundingClientRect();
+            img.style.transformOrigin =
+                ((e.clientX - r.left) / r.width * 100).toFixed(1) + '% ' +
+                ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%';
+        });
+        });
+    </script>
+</body>
