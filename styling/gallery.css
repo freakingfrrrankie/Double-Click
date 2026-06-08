@@ -1,0 +1,47 @@
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    background-size: cover;
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-size: 15pt;
+}
+header{  
+    height: 120px; 
+    text-align: justify;
+}
+
+div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+div.gallery-item {
+  margin: 10px;
+
+  filter: grayscale(100%);
+  opacity: 50%;
+  transition: filter 1s, opacity 1s;
+}
+
+div.gallery-item:hover {
+  filter: grayscale(0%);
+  opacity: 100%;
+ 
+}
+
+div.gallery-item img {
+  width: auto;
+  height: 250px;
+  border: 20px solid transparent;
+  border-image: url('/gallery/2025-2026/gallery25-26/blacklacelarge.png') 34 round;
+}
+
+div.gallery-item div.desc {
+  padding: 10px;
+  text-align: center;
+}

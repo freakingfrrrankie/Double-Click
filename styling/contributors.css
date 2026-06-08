@@ -1,0 +1,39 @@
+*{  margin: 0;
+    box-sizing: border-box;
+      
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    background-size: cover;
+
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-size: 11pt;
+
+}
+.container {
+    padding-right: 45px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: right;
+} 
+
+a { 
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: alias; 
+    background-image: linear-gradient(90deg,  #ffffff, #8e8d8d, #333);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: ease-in color 1s;
+    }
+a:hover {
+  color: #000000;
+}
+li {
+    list-style-type: none;
+    margin: none;
+    padding: 5px;
+} 
+

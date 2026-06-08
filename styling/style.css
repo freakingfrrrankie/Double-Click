@@ -1,0 +1,115 @@
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    background-size: cover;
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-size: 13pt;
+}
+
+li{ list-style: none;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+a{  text-decoration: none;
+}
+#heatmap-container {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none !important;
+  z-index: 9999;
+}
+
+#heatmap-container canvas {
+  pointer-events: none !important;
+}
+.top-nav{
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 15pt;
+    text-transform: capitalize;
+    display: flex;
+    height: 10vh;
+    width: 100vw;
+
+}
+.left {
+    width: 25vw;
+    text-align: left;
+    color: #333;
+}
+.left a{  
+    cursor: s-resize;
+    text-decoration: none;    
+    background-image: linear-gradient(90deg, #333, #8e8d8d, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: ease-in color 1s, font-family 1s, font-weight 1s, font-size 1s;
+}
+.left a:hover{  
+    color:#000000;
+}
+
+.middle {
+    width: 50vw;
+    text-align: center;
+    color: #333;
+}
+.middle a{
+    text-decoration: none;
+}
+.middle a:hover{
+    color:blue;
+}
+
+
+.right {
+    width: 25vw;
+    text-align: right;
+    color: #333;
+
+}
+.right a{  
+    cursor: s-resize;
+    text-decoration: none;    
+    background-image: linear-gradient(90deg,  #ffffff, #8e8d8d, #333);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: ease-in color 1s, font-family 1s, font-weight 1s, font-size 1s;
+}
+.right a:hover{  
+    color:#000000;
+}
+
+.main-layout {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    }
+.side-nav {
+      width: 25vw;
+      min-width: 200px;
+      height: 100vh;
+      border: none;
+    }
+
+.main-content {
+      width: 50vw;
+      height: 100vh;
+      border: none;
+    }
+.footnote {
+      width: 25vw;
+      min-width: 200px;
+      height: 100vh;
+      border: none;
+    }
