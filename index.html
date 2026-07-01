@@ -12,9 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Unresolved inputs</title>
     <!-- SEO 
-    <meta name="title" content="Personal Bubble / Frankie Anh Le">
-    <meta name="description" content="Class description here">"
-    <link rel="canonical" href="frankie.onl"> -->
+
     <!-- STYLING -->
     <link rel="stylesheet" href="/styling/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,33 +30,58 @@
     <div class="main-layout">
     
         <!-- LEFT — side nav -->
-        <aside class="content-bar">
-                <iframe
-                name="side-nav"
-                class="side-nav"
-                src="/pages/nav.html"
-                title="Side Nav">
-            </iframe>
+        <aside class="content-bar" id="content-bar">
+            <button class="panel-close" aria-label="Close">&#8604;</button>
+            <iframe name="side-nav" class="side-nav" src="/pages/nav.html" title="Side Nav"></iframe>
         </aside>
-        <main>  
+
         <!-- CENTER — default loads gallery -->
-            <iframe
-                name="main-content"
-                class="main-content"
-                src="pages/gallery.html"
-                title="Main Content">
-            </iframe>
+        <main>  
+            <iframe name="main-content" class="main-content" src="pages/gallery.html" title="Main Content"></iframe>
         </main>
+
         <!-- RIGHT — footnote -->
-        <aside>
-            <iframe
-            name="footnote"
-            class="footnote"
-            src="pages/footnote.html"
-            title="Footnote">
-            </iframe>
+        <aside class="footnote-panel" id="footnote-panel">
+            <button class="panel-close" aria-label="Close">&#8605;</button>
+            <iframe name="footnote" class="footnote" src="pages/footnote.html" title="Footnote"></iframe>
         </aside>
+
     </div>
+<script>
+document.querySelectorAll('.nav-toggle').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.getElementById(link.dataset.target);
+        const isAlreadyActive = target.classList.contains('is-active');
 
+        document.querySelectorAll('aside.is-active').forEach(a => a.classList.remove('is-active'));
 
+        if (!isAlreadyActive) {
+            target.classList.add('is-active');
+        }
+    });
+});
+
+document.querySelectorAll('.panel-close').forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.closest('aside').classList.remove('is-active');
+    });
+});
+
+// NEW: auto-open the footnote panel on mobile when its iframe navigates
+const footnoteIframe = document.querySelector('.footnote');
+const footnotePanel = document.getElementById('footnote-panel');
+let isInitialLoad = true;
+
+footnoteIframe.addEventListener('load', () => {
+    if (isInitialLoad) {
+        isInitialLoad = false; // skip the very first load (the default src on page load)
+        return;
+    }
+    if (window.matchMedia('(max-width: 600px)').matches) {
+        document.querySelectorAll('aside.is-active').forEach(a => a.classList.remove('is-active'));
+        footnotePanel.classList.add('is-active');
+    }
+});
+</script>
 </html>
