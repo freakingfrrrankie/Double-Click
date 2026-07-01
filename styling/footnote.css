@@ -35,3 +35,8 @@ iframe {
 sup{ font-size: 8pt;
     font-weight: 700;
     color: red;}
+
+@media (max-width: 600px) {
+    .ref{
+    padding-top: 5px;}
+}
