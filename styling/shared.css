@@ -9,7 +9,7 @@
 
 
 }
-header {height:200px; }
+header {min-height:200px; }
 .title {text-align: center;}
 
 h1{ 
@@ -135,4 +135,19 @@ sup{ font-size: 8pt;
     width: 100vw;
     height: 1000px;
     
+}
+@media (max-width: 600px) {
+    p{ font-size:  11pt;}
+    .jef{  width: 30vw; }
+    .grid-container-3{ grid-gap: 20px; }
+    .grid-container{ 
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);;
+        grid-gap: 30px; 
+        p{  font-size: 0.75em;
+            overflow-wrap: break-word; /* let long strings break instead of forcing width */
+            word-break: break-word;};}
+    .text{
+        font-size: 11pt;
+        text-indent: 30px;
+    }
 }
