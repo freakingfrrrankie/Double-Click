@@ -45,3 +45,11 @@ div.gallery-item div.desc {
   padding: 10px;
   text-align: center;
 }
+
+@media (max-width: 600px) {
+  *{font-size: 12pt;}
+  div.gallery-item img {
+    width: 90vw;
+    height: auto;
+  }
+}
