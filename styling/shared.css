@@ -21,7 +21,6 @@ h2{
     font-size: 18pt;   
 }
 
-
 h3{ font-weight:400;
     font-style: italic; 
     color: grey;
@@ -69,7 +68,6 @@ figcaption{
         display: grid;
         grid-template-columns: auto auto;
         grid-gap: 50px;
-
         }
 a {
     cursor: context-menu;
@@ -90,24 +88,21 @@ ul{
     
 }
 
-
 .box-jef{
     justify-content: left;
 }
 .jef {  width: 250px;
-    
         text-align: justify;
         justify-self: right;
         }
 .skippy {
             font-family: "Google Sans", sans-serif;
-
         }
 .entry{        
     border-style: inset;
     padding-inline: 30px 50px;
-    padding-block: 30px;}
-
+    padding-block: 30px;
+}
 .grid-container-3{
         display: grid;
         grid-template-columns: auto auto auto;
